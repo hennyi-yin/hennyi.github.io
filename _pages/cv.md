@@ -9,44 +9,38 @@ redirect_from:
 
 {% include base_path %}
 
-Education
+## Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* B.E. in Montreal, McGill University, 2025
   
-Skills
+## Work experience
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Summer 2024: AI Engineer (NLP&LLM)
+  * Huawei Shanghai Research Center
+  * Duties include: Fine-tuning large language models with RAG and SFT. Use RAG to help building large language model tools to advance code generation and improve efficiency. Develop automation and set paradigm to prompt. 
+  * Supervisor: Jiayi Zhu
 
-Publications
+* Summer 2023: Research Assistant
+  * Central South University
+  * Project: National Natural Science Foundation of China (No. 52202428)
+  * Duties include: Algorithm development, optimization. Responsible for algorithms and corrections throughout the publication
+  * Supervisor: Xun Wu
+  
+## Skills
+======
+* Programming:
+  * Python, Java, MySQL, HTML/CSS, VHDL
+* Libraries/Platforms:
+  * NumPy, Pandas, Skikit-learn, TensorFlow, OpenCV, Transformers, Matplotlib
+* Languages:
+  * English, Mandarin, French
+
+## Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
+<!--   
 Talks
 ======
   <ul>{% for post in site.talks reversed %}
@@ -62,3 +56,4 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+-->
