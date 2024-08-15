@@ -1,7 +1,7 @@
 ---
 title: "A Capacitance Estimation Method for DC-Link Capacitors in Railways Based on Precharging Model and Low Sampling Frequency"
 collection: publications
-category: Journals
+category: manuscripts
 permalink: /publication/2024-Jan-IEEE
 excerpt: ''
 date: 2024-Jan
