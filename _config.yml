@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Hengyi / Rabbit Burrow"
+title                    : "Hengyi's Rabbit Burrow"
 title_separator          : "-"
 name                     : &name "Hengyi Yin"
 description              : &description "a piano man"
