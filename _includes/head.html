@@ -19,3 +19,53 @@
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
+
+<!-- In _includes/head.html, add these lines -->
+<style>
+  :root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+  }
+  
+  [data-theme="dark"] {
+    --background-color: #333333;
+    --text-color: #ffffff;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+</style>
+
+<script>
+  // Function to set the theme
+  function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.setAttribute('data-theme', themeName);
+  }
+
+  // Function to toggle the theme
+  function toggleTheme() {
+    if (localStorage.getItem('theme') === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  }
+
+  // Immediately invoked function to set the theme on initial load
+  (function () {
+    if (localStorage.getItem('theme') === 'dark') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  })();
+</script>
+
+<!-- In _layouts/default.html, add this button where you want it to appear -->
+<button onclick="toggleTheme()" id="themeToggle" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+  🌓
+</button>
