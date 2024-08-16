@@ -37,6 +37,14 @@
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  #themeToggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+  }
 </style>
 
 <script>
@@ -44,6 +52,7 @@
   function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.setAttribute('data-theme', themeName);
+    updateThemeToggle(themeName);
   }
 
   // Function to toggle the theme
@@ -55,17 +64,23 @@
     }
   }
 
+  // Function to update the theme toggle button
+  function updateThemeToggle(themeName) {
+    const toggleBtn = document.getElementById('themeToggle');
+    if (toggleBtn) {
+      toggleBtn.innerHTML = themeName === 'dark' ? '☀️' : '🌙';
+      toggleBtn.setAttribute('title', themeName === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+  }
+
   // Immediately invoked function to set the theme on initial load
   (function () {
-    if (localStorage.getItem('theme') === 'dark') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
   })();
 </script>
 
 <!-- In _layouts/default.html, add this button where you want it to appear -->
-<button onclick="toggleTheme()" id="themeToggle" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
-  🌓
+<button onclick="toggleTheme()" id="themeToggle" style="position: fixed; top: 20px; right: 20px; z-index: 1000;" title="Switch theme">
+  🌙
 </button>
