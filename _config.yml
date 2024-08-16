@@ -12,7 +12,7 @@ title                    : "Hengyi's Rabbit Burrow"
 title_separator          : "-"
 name                     : &name "Hengyi Yin"
 description              : &description "a piano man"
-url                      : https://hennyi-yin.github.io/hennyi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://hennyi-yin.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "hennyi-yin.github.io/hennyi.github.io/"
 
