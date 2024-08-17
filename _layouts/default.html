@@ -33,3 +33,27 @@ layout: compress
 <button onclick="toggleTheme()" id="themeToggle" style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
   🌓
 </button>
+
+<script>
+  function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.setAttribute('data-theme', themeName);
+  }
+
+  function toggleTheme() {
+    if (localStorage.getItem('theme') === 'dark') {
+      setTheme('light');
+    } else {
+      setTheme('dark');
+    }
+  }
+
+  // Immediately invoked function to set the theme on initial load
+  (function () {
+    if (localStorage.getItem('theme') === 'dark') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  })();
+</script>
