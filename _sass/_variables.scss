@@ -49,8 +49,6 @@ $masthead-height            : 70px;
 $sidebar-screen-min-width   : 1024px;
 $sidebar-link-max-width     : 250px;
 
-
-
 /*
    Colors
    ========================================================================== */
@@ -61,12 +59,11 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
-$code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$body-color                 : var(--background-color);
+$background-color           : var(--background-color);
+$text-color                 : var(--text-color);
+$border-color               : var(--border-color);
+$link-color                 : var(--link-color);
 
 $primary-color              : #7a8288;
 $success-color              : #62c462;
@@ -100,27 +97,17 @@ $vine-color                 : #00bf8f;
 $youtube-color              : #bb0000;
 $xing-color                 : #006567;
 
-
 /* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
-$masthead-link-color        : $primary-color;
-$masthead-link-color-hover  : mix(#000, $primary-color, 25%);
-
+$link-color-hover           : mix(#000, var(--link-color), 25%);
+$link-color-visited         : mix(#fff, var(--link-color), 25%);
+$masthead-link-color        : var(--text-color);
+$masthead-link-color-hover  : mix(#000, var(--text-color), 25%);
 
 /*
    Breakpoints
    ========================================================================== */
 
 @include breakpoint-set("to ems", true);
-/*
-$small                      : 400px;
-$medium                     : 500px;
-$medium-wide                : 550px;
-$large                      : 1200px;
-$x-large                    : 1800px;
-*/
 
 $small                      : 600px !default;
 $medium                     : 768px !default;
@@ -153,7 +140,6 @@ $susy: (
   // ),
 );
 
-
 /*
    Other
    ========================================================================== */
@@ -173,12 +159,15 @@ $link-color-light           : $info-color;
 $link-color-dark            : lighten($info-color, 15%);
 $border-color-light         : $lighter-gray;
 $border-color-dark          : $dark-gray;
+$code-background-color-light: #fafafa;
+$code-background-color-dark : #1a1a1a;
 
 :root {
   --background-color: #{$background-color-light};
   --text-color: #{$text-color-light};
   --link-color: #{$link-color-light};
   --border-color: #{$border-color-light};
+  --code-background-color: #{$code-background-color-light};
 }
 
 [data-theme="dark"] {
@@ -186,4 +175,8 @@ $border-color-dark          : $dark-gray;
   --text-color: #{$text-color-dark};
   --link-color: #{$link-color-dark};
   --border-color: #{$border-color-dark};
+  --code-background-color: #{$code-background-color-dark};
 }
+
+$code-background-color      : var(--code-background-color);
+$code-background-color-dark : var(--code-background-color);
